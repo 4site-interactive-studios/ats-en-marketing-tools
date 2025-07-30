@@ -1,0 +1,665 @@
+<mjml>
+    <mj-head>
+        <mj-breakpoint width="600px"/>
+        <mj-attributes>
+            <mj-all color="inherit" font-family="Arial, sans-serif" font-size="16px" />
+            <mj-button font-size="20px" font-weight="700" border-radius="0px" inner-padding="20px 20px" css-class="button" />
+        </mj-attributes>
+        <mj-raw>
+            <meta name="color-scheme" content="light dark">
+            <meta name="supported-color-schemes" content="light dark">
+            <meta name="format-detection" content="telephone=no">
+        </mj-raw>
+        <mj-style>
+            div[data-container] {
+                /* Email builder compatability styles */
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            body {
+                color: #000000;
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+            }
+
+            a {
+                color: #114A99;
+            }
+
+            h1,h2,h3,h4,h5,h6 {
+                color: #000000;
+                font-family: Arial, sans-serif;
+            }
+
+            h1 {
+                font-size: 32px;
+                line-height: 1.1;
+            }
+
+            h2 {
+                font-size: 28px;
+                line-height: 1.2;
+            }
+
+            h3 {
+                font-size: 22px;
+                line-height: 1.4;
+            }
+
+            h4 {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .footer-text p {
+                font-size: 14px;
+            }
+
+            .wysiwyg > div > *:first-child {
+                margin-top: 0;
+            }
+
+            .wysiwyg > div > *:last-child {
+                margin-bottom: 0;
+            }
+
+            .mobile-only {
+                display: none!important;
+            }
+
+            @media (max-width: 599px) {
+                .desktop-only {
+                    display: none!important;
+                }
+
+                .signature-img {
+                    width: 135px!important;
+                }
+
+                .signature-text {
+                    width: calc(100% - 135px)!important;
+                }
+
+                .pre-footer-block .socials {
+                  padding-left: 0!important;
+                  padding-right: 12px!important;
+                }
+
+                .two-col-column > table > tbody > tr > td {
+                    padding: 0!important;
+                }
+
+                .pre-footer-text > table > tbody > tr > td {
+                    padding-right: 0!important;
+                }
+
+                .pre-footer-block .social-link > td {
+                    padding: 0 6px!important;
+                }
+            }
+        </mj-style>
+        <mj-style>
+            /* dark mode styles */
+            :root {
+                color-scheme: light dark;
+                supported-color-schemes: light dark;
+            }
+
+            .dark-only {
+                display: none;
+            }
+
+            [data-ogsc] .dark-only {
+                display: block !important;
+            }
+
+            [data-ogsc] .light-only {
+                display: none !important;
+            }
+
+
+            @media (prefers-color-scheme: dark) {
+                .light-only {
+                    display: none !important;
+                }
+
+                .dark-only {
+                    display: block !important;
+                }
+
+                body,
+                .email-body {
+                    color: #eeeeee !important;
+                    background-color: #171819 !important;
+                }
+
+                a {
+                    color: #9ca4a5 !important;
+                }
+
+                h1,h2,h3,h4,h5,h6 {
+                    color:  #b0b4b5 !important;
+                }
+
+                .footer-block p {
+                    color: #eeeeee !important;
+                }
+
+                .block,
+                .block > table,
+                .spacer-block td {
+                    background-color: #0e0f0f !important;
+                }
+
+                .image-text-button-block.block,
+                .image-text-button-block.block > table,
+                .two-col-image-text-button-block.block,
+                .two-col-image-text-button-block.block > table {
+                    background-color: #1f2021  !important;
+                }
+
+                .button td,
+                .button a {
+                    background-color: #eaebec !important;
+                    border-color: #eaebec !important;
+                    color: #121314 !important;
+                }
+
+                .social-link table {
+                    background-color: #0e0f0f  !important;
+                }
+
+                .social-link table td {
+                    padding: 1px !important;
+                }
+
+                .divider > p {
+                    border-color: #eeeeee!important;
+                }
+            }
+        </mj-style>
+        <mj-style>
+            /* sizing classes for adjustable column widths 50-550px */
+            @media only screen and (min-width:600px) {
+                .mj-column-px-50,
+                .moz-text-html .mj-column-px-50 {
+                    width: 50px !important;
+                    max-width: 50px;
+                }
+
+                .mj-column-px-100,
+                .moz-text-html .mj-column-px-100 {
+                    width: 100px !important;
+                    max-width: 100px;
+                }
+
+                .mj-column-px-150,
+                .moz-text-html .mj-column-px-150 {
+                    width: 150px !important;
+                    max-width: 150px;
+                }
+
+                .mj-column-px-200,
+                .moz-text-html .mj-column-px-200 {
+                    width: 200px !important;
+                    max-width: 200px;
+                }
+
+                .mj-column-px-250,
+                .moz-text-html .mj-column-px-250 {
+                    width: 250px !important;
+                    max-width: 250px;
+                }
+
+                .mj-column-px-300,
+                .moz-text-html .mj-column-px-300 {
+                    width: 300px !important;
+                    max-width: 300px;
+                }
+
+                .mj-column-px-350,
+                .moz-text-html .mj-column-px-350 {
+                    width: 350px !important;
+                    max-width: 350px;
+                }
+
+                .mj-column-px-400,
+                .moz-text-html .mj-column-px-400 {
+                    width: 400px !important;
+                    max-width: 400px;
+                }
+
+                .mj-column-px-450,
+                .moz-text-html .mj-column-px-450 {
+                    width: 450px !important;
+                    max-width: 450px;
+                }
+
+                .mj-column-px-500,
+                .moz-text-html .mj-column-px-500 {
+                    width: 500px !important;
+                    max-width: 500px;
+                }
+
+                .mj-column-px-550,
+                .moz-text-html .mj-column-px-550 {
+                    width:550px !important;
+                    max-width: 550px;
+                }
+            }
+            @media only screen and (max-width:599px) {
+                table.mj-full-width-mobile {
+                    width: 100% !important;
+                }
+
+                td.mj-full-width-mobile {
+                    width: auto !important;
+                }
+
+                td.mj-full-width-mobile img {
+                    height: auto!important;
+                }
+            }
+        </mj-style>
+        <mj-raw>
+            <!-- Thunderbird and other clients responsive CSS -->
+            <style media="screen and (min-width:600px)">
+              .moz-text-html .mj-column-per-100 {
+                width: 100% !important;
+                max-width: 100%;
+              }
+
+              .moz-text-html .mj-column-per-66-66 {
+                width: 66.66% !important;
+                max-width: 66.66%;
+              }
+
+              .moz-text-html .mj-column-per-33-33 {
+                width: 33.33% !important;
+                max-width: 33.33%;
+              }
+
+              .moz-text-html .mj-column-px-50 {
+                width: 50px !important;
+                max-width: 50px;
+              }
+
+              .moz-text-html .mj-column-px-100 {
+                width: 100px !important;
+                max-width: 100px;
+              }
+
+              .moz-text-html .mj-column-px-150 {
+                width: 150px !important;
+                max-width: 150px;
+              }
+
+              .moz-text-html .mj-column-px-200 {
+                width: 200px !important;
+                max-width: 200px;
+              }
+
+              .moz-text-html .mj-column-px-250 {
+                width: 250px !important;
+                max-width: 250px;
+              }
+
+              .moz-text-html .mj-column-px-300 {
+                width: 300px !important;
+                max-width: 300px;
+              }
+
+              .moz-text-html .mj-column-px-350 {
+                width: 350px !important;
+                max-width: 350px;
+              }
+
+              .moz-text-html .mj-column-px-400 {
+                width: 400px !important;
+                max-width: 400px;
+              }
+
+              .moz-text-html .mj-column-px-450 {
+                width: 450px !important;
+                max-width: 450px;
+              }
+
+              .moz-text-html .mj-column-px-500 {
+                width: 500px !important;
+                max-width: 500px;
+              }
+
+              .moz-text-html .mj-column-px-550 {
+                width:550px !important;
+                max-width: 550px;
+              }
+            </style>
+        </mj-raw>
+    </mj-head>
+    <mj-body css-class="email-body" background-color="#ffffff">
+        <!-- START: Main Content -->
+        <!-- START: Logo Image Block -->
+        <mj-section css-class="image-block block" background-color="#ffffff" padding="30px 0">
+            <mj-column>
+                <mj-image
+                        src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/logo-blue.png?v=1753795414000"
+                        alt="ATS Logo"
+                        href="https://ats.org/"
+                        width="250px"
+                        padding="0"
+                        css-class="light-only"
+                />
+                <mj-raw><!--[if !mso]><!--></mj-raw>
+                <mj-image
+                        src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/logo-white.png?v=1753795416000"
+                        alt="ATS Logo"
+                        href="https://ats.org/"
+                        width="250px"
+                        padding="0"
+                        css-class="dark-only"
+                />
+                <mj-raw><!--<![endif]--></mj-raw>
+            </mj-column>
+        </mj-section>
+        <!-- END: Logo Image Block -->
+
+        <!-- START: Image -->
+        <mj-section css-class="image-block block" background-color="#ffffff" padding="0">
+            <mj-column>
+                <mj-image
+                    src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ABD-Feb_600x300_2025-02-17-CLEAN.png"
+                    alt="Custom alt text"
+                    href="https://ats.org/"
+                    width="600px"
+                    padding="0px"
+                />
+            </mj-column>
+        </mj-section>
+        <!-- END: Image  -->
+
+        <!-- START: WYSIWYG (Text content) -->
+        <mj-section css-class="text-block block" background-color="#ffffff">
+            <mj-column>
+                <mj-text padding="0 25px" css-class="wysiwyg">
+                    <p>Dear Friend,</p>
+                    <p>For 100 years, the Technion has been the technological backbone of Israel. Technion alumni have developed countless technologies — from the world-renowned Iron Dome to groundbreaking new tools like Iron Beam — that save lives and ensure the nation thrives.</p>
+                    <p><a href="#"><b>But enriching and empowering the minds who develop these technologies takes the support of all of us. Can we count on you?</b></a></p>
+                    <h4 style="text-align: center">HELP REACH OUR 100-DONOR FEBRUARY GOAL!</h4>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <!-- END: WYSIWYG (Text content) -->
+
+        <!-- START: CTA Button -->
+        <mj-section css-class="cta-button-block block" background-color="#FFFFFF" padding="0">
+            <mj-column>
+                <mj-button
+                        color="#FFFFFF"
+                        background-color="#f7942f"
+                        border="2px solid #f7942f"
+                        href="https://ats.org/"
+                        align="center"
+                >
+                    Give Now
+                </mj-button>
+            </mj-column>
+        </mj-section>
+        <!-- END: CTA Button -->
+
+        <!-- START: Signature card -->
+        <mj-section css-class="signature-block block" background-color="#ffffff">
+            <mj-group>
+                <mj-column vertical-align="middle" width="135px" padding-left="25px" css-class="signature-img">
+                    <mj-image
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/FY24-HS-MWL.png"
+                            alt="Custom alt text"
+                            padding="0"
+                    />
+                </mj-column>
+                <mj-column vertical-align="middle" width="450px" padding-left="25px" padding-right="25px" css-class="signature-text">
+                    <mj-image
+                        src="https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2411/Signature-Michael-Waxman-Lenz.png"
+                        alt="Signature Image"
+                        width="285px"
+                        padding="0"
+                        align="left"
+                    />
+                    <mj-text font-size="16px" padding="0" css-class="wysiwyg">
+                        <p><b>Matthew Kehres</b>
+                            <br>
+                            Chief Executive Officer, American Technion Society</p>
+                    </mj-text>
+                </mj-column>
+            </mj-group>
+        </mj-section>
+        <!-- END: Signature card -->
+
+        <!-- START: Spacer -->
+        <mj-section css-class="spacer-block block" padding="0">
+            <mj-column>
+                <mj-spacer height="20px" container-background-color="#ffffff" />
+            </mj-column>
+        </mj-section>
+        <!-- END: Spacer -->
+
+        <!-- START: 1 col image, text, button -->
+        <mj-section css-class="image-text-button-block block" background-color="#FFFFFF" padding="0 25px 25px">
+            <mj-column>
+                <mj-image
+                        src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/Lihi-Speaker-Event.png"
+                        alt="Custom alt text"
+                        href="https://ats.org/"
+                        padding="25px 0 0"
+                        align="center"
+                        fluid-on-mobile="true"
+                />
+                <mj-text padding="25px 0 0" css-class="wysiwyg">
+                    <h2>Reach Out and Touch the Future</h2>
+                    <p>
+                        What if technology allowed us not only to see and hear each other but also to feel – examining a sick patient or tucking in a grandchild from across the globe? Discover how the research of Technion Professor Lihi Zelnik-Manor is bringing us closer to such possibilities.
+                    </p>
+                </mj-text>
+                <mj-button
+                    css-class="button"
+                    color="#ffffff"
+                    background-color="#094d9a"
+                    href="https://ats.org/"
+                    align="left"
+                    padding="25px 0 0"
+                >Read</mj-button>
+            </mj-column>
+        </mj-section>
+        <!-- END: 1 col image, text, button -->
+
+        <!-- START: Spacer -->
+        <mj-section css-class="spacer-block block" padding="0">
+            <mj-column>
+                <mj-spacer height="20px" container-background-color="#ffffff" />
+            </mj-column>
+        </mj-section>
+        <!-- END: Spacer -->
+
+        <!-- START: 2 col image, text, button -->
+        <mj-section css-class="two-col-image-text-button-block block" background-color="#f1f1f1" padding="25px 25px 0">
+            <mj-column>
+                <mj-text padding="0" css-class="wysiwyg">
+                    <h2>Technion in the News</h2>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+        <mj-section css-class="two-col-image-text-button-block block" background-color="#f1f1f1" padding="0 25px 25px">
+            <mj-column css-class="two-col-column" padding-right="12px">
+                <mj-image
+                        src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/Heart-Doctor-Hands.png"
+                        alt="Custom alt text"
+                        href="https://ats.org/"
+                        padding="25px 0 0"
+                        align="center"
+                        fluid-on-mobile="true"
+                />
+                <mj-text padding="25px 0 0" css-class="wysiwyg">
+                    <h2>Fixing Hearts, Changing Lives</h2>
+                    <p>
+                        A breakthrough in heart repair is on the horizon: LifeCord’s innovative device offers a minimally invasive alternative to open-heart surgery for mitral regurgitation. With first-in-human trials set for 2025, could this be the future of cardiac care?
+                    </p>
+                </mj-text>
+                <mj-button
+                        css-class="button"
+                        color="#ffffff"
+                        background-color="#094d9a"
+                        href="https://ats.org/"
+                        align="left"
+                        padding="25px 0 0"
+                >Read</mj-button>
+            </mj-column>
+            <mj-column css-class="two-col-column" padding-left="12px">
+                <mj-image
+                        src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/DNA-RNA-Science.png"
+                        alt="Custom alt text"
+                        href="https://ats.org/"
+                        padding="25px 0 0"
+                        align="center"
+                        fluid-on-mobile="true"
+                />
+                <mj-text padding="25px 0 0" css-class="wysiwyg">
+                    <h2>How RNA Research Could Transform Medicine</h2>
+                    <p>
+                        Could cutting-edge RNA research unlock new treatments for cancer and brain diseases? Technion scientists are exploring innovative genetic therapies that could change the future of medicine.
+                    </p>
+                </mj-text>
+                <mj-button
+                        css-class="button"
+                        color="#ffffff"
+                        background-color="#094d9a"
+                        href="https://ats.org/"
+                        align="left"
+                        padding="25px 0 0"
+                >Read</mj-button>
+            </mj-column>
+        </mj-section>
+        <!-- END: 2 col image, text, button -->
+
+        <!-- START: Pre-footer -->
+        <mj-wrapper>
+            <mj-section css-class="pre-footer-block block" background-color="#f1f1f1">
+                <mj-group>
+                    <mj-column vertical-align="middle" width="60%" css-class="pre-footer-text">
+                        <mj-text>
+                            <span style="font-size: 18px;font-weight: bold;color:#686868;line-height: 120%">
+                                Share these Technion Innovations with Friends and Family
+                            </span>
+                        </mj-text>
+                    </mj-column>
+                    <mj-column vertical-align="middle" width="40%" css-class="pre-footer-socials">
+                        <mj-social css-class="socials" icon-size="30px" icon-padding="0" mode="horizontal" inner-padding="0px 16px" align="right">
+                            <mj-social-element
+                                    css-class="social-link"
+                                    name="facebook-noshare"
+                                    src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS-SocialShare-Facebook.png?v=1706351552000"
+                                    href="https://www.facebook.com/sharer/sharer.php?u=https://ats.org"
+                                    background-color="#f1f1f1"
+                                    alt="Facebook Logo"
+                            />
+                            <mj-social-element
+                                    css-class="social-link"
+                                    name="twitter-noshare"
+                                    src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS-Socialshare-Twitter.png?v=1706351556000"
+                                    href="https://twitter.com/intent/tweet?url=https://ats.org&text=Check%20out%20the%20latest%20from%20@TechnionUSA"
+                                    background-color="#f1f1f1"
+                                    alt="X Logo"
+                            />
+                            <mj-social-element
+                                    css-class="social-link"
+                                    name="linkedin-noshare"
+                                    src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS-SocialShare-LinkedIn.png?v=1706351554000"
+                                    href="https://www.linkedin.com/shareArticle?url=https://ats.org"
+                                    background-color="#f1f1f1"
+                                    alt="LinkedIn Logo"
+                            />
+                        </mj-social>
+                    </mj-column>
+                </mj-group>
+            </mj-section>
+        </mj-wrapper>
+        <!-- END: Pre-footer -->
+
+        <!-- START: Footer -->
+        <mj-section css-class="footer-block block" background-color="#f1f1f1" padding="45px 0">
+            <mj-column width="440px">
+                <mj-image
+                        alt=""
+                        src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/logo-blue.png?v=1753795414000"
+                        width="200px"
+                        href="https://ats.org/"
+                        css-class="light-only"
+                />
+                <mj-raw><!--[if !mso]><!--></mj-raw>
+                <mj-image
+                        alt=""
+                        src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/logo-white.png?v=1753795416000"
+                        width="200px"
+                        href="https://ats.org/"
+                        css-class="dark-only"
+                />
+                <mj-raw><!--<![endif]--></mj-raw>
+                <mj-text align="center" line-height="18px" padding="10px 25px 0" css-class="wysiwyg">
+                    <p style="font-size: 11px; color: #114A99">55 East 59th Street, New York, NY 10022
+                    <br>212.407.6300 <strong>| </strong>info@ats.org <strong>| </strong><a href="https://ats.org/">ats.org</a>
+                    <br><a href="https://ats.org/contact/"><strong>Contact Us</strong></a><strong> | </strong><a href="https://us.engagingnetworks.app/page/email/subscribe?campaignpageurl=https%3A%2F%2Fsecure.ats.org%2Fpage%2F53949%2Fsubscriptions%2F1%3F%23&amp;ea.campaigner.email=%2BwY8tfDne9Mvt2z5xlLGbYYzSnZNTJ5hYRvCvY1aUew="><strong>Unsubscribe</strong></a></p>
+                </mj-text>
+                <mj-social css-class="socials" icon-size="20px" icon-padding="0" mode="horizontal" inner-padding="0px 6px" align="center" padding-top="20px">
+                    <mj-social-element
+                            css-class="social-link"
+                            name="facebook-noshare"
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS-FB.png?v=1706349320000"
+                            href="https://www.facebook.com/americantechnionsociety/"
+                            background-color="#f1f1f1"
+                            alt="Facebook Logo"
+                    />
+                    <mj-social-element
+                            css-class="social-link"
+                            name="instagram-noshare"
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS-IG.png?v=1706349323000"
+                            href="https://www.instagram.com/americantechnionsociety/"
+                            background-color="#f1f1f1"
+                            alt="Instagram Logo"
+                    />
+                    <mj-social-element
+                            css-class="social-link"
+                            name="linkedin-noshare"
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS-LI.png?v=1706349325000"
+                            href="https://www.linkedin.com/company/american-technion-society"
+                            background-color="#f1f1f1"
+                            alt="LinkedIn Logo"
+                    />
+                    <mj-social-element
+                            css-class="social-link"
+                            name="twitter-noshare"
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS-X.png?v=1706349327000"
+                            href="https://twitter.com/TechnionUSA"
+                            background-color="#f1f1f1"
+                            alt="X Logo"
+                    />
+                    <mj-social-element
+                            css-class="social-link"
+                            name="youtube-noshare"
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS-YT.png?v=1706349329000"
+                            href="https://www.youtube.com/user/TechnionSociety"
+                            background-color="#f1f1f1"
+                            alt="YouTube Logo"
+                    />
+                </mj-social>
+            </mj-column>
+        </mj-section>
+        <!-- END: Footer -->
+
+
+        <!-- END: Main Content -->
+    </mj-body>
+</mjml>

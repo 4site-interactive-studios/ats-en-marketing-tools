@@ -1,0 +1,16 @@
+{
+  "name": "ats-en-marketing-tools",
+  "version": "1.0.0",
+  "description": "A template for building EN marketing tools projects using MJML.",
+  "scripts": {
+    "build": "mjml ./src/templates/*.mjml -o ./dist/",
+    "watch": "mjml -w ./src/templates/*.mjml -o ./dist/"
+  },
+  "keywords": [],
+  "author": "4Site Interactive Studios",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "mjml": "^4.15.3"
+  }
+}
