@@ -411,6 +411,14 @@
             </mj-column>
         </mj-section>
         <!-- END: CTA Button -->
+Í
+        <!-- START: Divider -->
+        <mj-section css-class="divider-block block" background-color="#ffffff">
+            <mj-column>
+                <mj-divider border-width="2px" border-color="lightgrey" padding="0 25px" />
+            </mj-column>
+        </mj-section>
+        <!-- END: Divider -->
 
         <!-- START: Signature card -->
         <mj-section css-class="signature-block block" background-color="#ffffff">
