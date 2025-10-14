@@ -608,9 +608,9 @@
                 <mj-text align="center" line-height="18px" padding="10px 25px 0" css-class="wysiwyg">
                     <p style="font-size: 11px; color: #114A99">55 East 59th Street, New York, NY 10022
                     <br>212.407.6300 <strong>| </strong>info@ats.org <strong>| </strong><a href="https://ats.org/">ats.org</a>
-                    <br><a href="https://ats.org/contact/"><strong>Contact Us</strong></a><strong> | </strong><a href="https://us.engagingnetworks.app/page/email/subscribe?campaignpageurl=https%3A%2F%2Fsecure.ats.org%2Fpage%2F53949%2Fsubscriptions%2F1%3F%23&amp;ea.campaigner.email=%2BwY8tfDne9Mvt2z5xlLGbYYzSnZNTJ5hYRvCvY1aUew="><strong>Unsubscribe</strong></a></p>
+                    <br><a href="https://ats.org/contact/"><strong>Contact Us</strong></a><strong> | </strong><a href="{unsubscribe_action~9423~120937~https://secure.ats.org/page/53949/subscriptions/1}"><strong>Unsubscribe</strong></a></p>
                 </mj-text>
-                <mj-social css-class="socials" icon-size="20px" icon-padding="0" mode="horizontal" inner-padding="0px 6px" align="center" padding-top="20px">
+                <mj-social css-class="socials light-only" icon-size="20px" icon-padding="0" mode="horizontal" inner-padding="0px 6px" align="center" padding-top="20px">
                     <mj-social-element
                             css-class="social-link"
                             name="facebook-noshare"
@@ -652,6 +652,52 @@
                             alt="YouTube Logo"
                     />
                 </mj-social>
+
+                <mj-raw><!--[if !mso]><!--></mj-raw>
+                <mj-social css-class="socials dark-only" icon-size="20px" icon-padding="0" mode="horizontal" inner-padding="0px 6px" align="center" padding-top="20px">
+                    <mj-social-element
+                            css-class="social-link"
+                            name="facebook-noshare"
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS_Facebook_White.png?v=1760457739000"
+                            href="https://www.facebook.com/americantechnionsociety/"
+                            background-color="#f1f1f1"
+                            alt="Facebook Logo"
+                            icon-size="14px"
+                    />
+                    <mj-social-element
+                            css-class="social-link"
+                            name="instagram-noshare"
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS_Instagram_White.png?v=1760457741000"
+                            href="https://www.instagram.com/americantechnionsociety/"
+                            background-color="#f1f1f1"
+                            alt="Instagram Logo"
+                    />
+                    <mj-social-element
+                            css-class="social-link"
+                            name="linkedin-noshare"
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS_LinkedIn_White.png?v=1760457738000"
+                            href="https://www.linkedin.com/company/american-technion-society"
+                            background-color="#f1f1f1"
+                            alt="LinkedIn Logo"
+                    />
+                    <mj-social-element
+                            css-class="social-link"
+                            name="twitter-noshare"
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS_X_White.png?v=1760457736000"
+                            href="https://twitter.com/TechnionUSA"
+                            background-color="#f1f1f1"
+                            alt="X Logo"
+                    />
+                    <mj-social-element
+                            css-class="social-link"
+                            name="youtube-noshare"
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS_Instagram_White.png?v=1760457741000"
+                            href="https://www.youtube.com/user/TechnionSociety"
+                            background-color="#f1f1f1"
+                            alt="YouTube Logo"
+                    />
+                </mj-social>
+                <mj-raw><!--<![endif]--></mj-raw>
             </mj-column>
         </mj-section>
         <!-- END: Footer -->
