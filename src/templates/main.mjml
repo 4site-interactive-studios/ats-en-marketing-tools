@@ -73,6 +73,12 @@
                 display: none!important;
             }
 
+            .two-col-col .wysiwyg h1,
+            .two-col-col .wysiwyg h2,
+            .two-col-col .wysiwyg h3 {
+                margin: 0 0 10px!important;
+            }
+
             @media (max-width: 599px) {
                 .desktop-only {
                     display: none!important;
@@ -93,6 +99,14 @@
 
                 .two-col-column > table > tbody > tr > td {
                     padding: 0!important;
+                }
+
+                .two-col-col > table > tbody > tr > td {
+                    padding: 0 25px!important;
+                }
+
+                .two-col-col .wysiwyg {
+                    padding-top: 20px!important;
                 }
 
                 .pre-footer-text > table > tbody > tr > td {
@@ -474,6 +488,68 @@
         </mj-section>
         <!-- END: 1 col image, text, button -->
 
+        <!-- START: 2 col image, text and button -->
+        <mj-section css-class="two-col-image-text-block block" background-color="#ffffff">
+            <mj-column css-class="two-col-col" width="270px" padding="0 12px 0 0" vertical-align="middle">
+                <mj-image
+                    src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/Heart-Doctor-Hands.png"
+                    alt="Custom alt text"
+                    href="https://ats.org/"
+                    align="center"
+                    fluid-on-mobile="true"
+                    padding="0"
+                />
+            </mj-column>
+            <mj-column css-class="two-col-col" padding="0 0 0 12px" width="330px" vertical-align="middle">
+                <mj-text padding="0" css-class="wysiwyg">
+                    <h3>Fixing Hearts, Changing Lives</h3>
+                    <p>
+                        A breakthrough in heart repair is on the horizon: LifeCord’s innovative device offers a minimally invasive alternative to open-heart surgery for mitral regurgitation.
+                    </p>
+                </mj-text>
+                <mj-button
+                    css-class="button"
+                    color="#ffffff"
+                    background-color="#094d9a"
+                    href="https://ats.org/"
+                    align="left"
+                    padding="20px 0 0"
+                >Read More</mj-button>
+            </mj-column>
+        </mj-section>
+        <!-- END: 2 col image and text -->
+
+        <!-- START: reversed 2 col image, text and button -->
+        <mj-section css-class="two-col-image-text-block block" background-color="#ffffff" direction="rtl">
+            <mj-column css-class="two-col-col" width="270px" padding="0 0 0 12px" vertical-align="middle">
+                <mj-image
+                        src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/Heart-Doctor-Hands.png"
+                        alt="Custom alt text"
+                        href="https://ats.org/"
+                        align="center"
+                        fluid-on-mobile="true"
+                        padding="0"
+                />
+            </mj-column>
+            <mj-column css-class="two-col-col" padding="0 12px 0 0" width="330px" vertical-align="middle">
+                <mj-text padding="0" css-class="wysiwyg">
+                    <h3>Fixing Hearts, Changing Lives</h3>
+                    <p>
+                        A breakthrough in heart repair is on the horizon: LifeCord’s innovative device offers a minimally invasive alternative to open-heart surgery for mitral regurgitation.
+                    </p>
+                </mj-text>
+                <mj-button
+                        css-class="button"
+                        color="#ffffff"
+                        background-color="#094d9a"
+                        href="https://ats.org/"
+                        align="left"
+                        padding="20px 0 0"
+                >Read More</mj-button>
+            </mj-column>
+        </mj-section>
+        <!-- END: reversed 2 col image and text -->
+
         <!-- START: Spacer -->
         <mj-section css-class="spacer-block block" padding="0">
             <mj-column>
@@ -683,7 +759,7 @@
                     <mj-social-element
                             css-class="social-link"
                             name="twitter-noshare"
-                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ATS_X_White.png?v=1760457736000"
+                            src="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10 129/ATS_X_White.png?v=1760457736000"
                             href="https://twitter.com/TechnionUSA"
                             background-color="#f1f1f1"
                             alt="X Logo"
