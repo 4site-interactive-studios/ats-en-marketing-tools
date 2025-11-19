@@ -37,8 +37,10 @@
             .overlay h3,
             .overlay h4,
             .overlay h5,
-            .overlay h6 {
+            .overlay h6,
+            .overlay p {
                 color: #ffffff;
+                mso-color-alt: auto;
             }
 
             h1 {
@@ -432,6 +434,7 @@
         <!-- END: WYSIWYG (Text content) -->
 
         <!-- START: Image with overlay -->
+        <!-- After compiling this block, you must add color="#000000" to the v:fill element -->
         <mj-section
                 css-class="overlay-image-block block"
                 background-url="https://acb0a5d73b67fccd4bbe-c2d8138f0ea10a18dd4c43ec3aa4240a.ssl.cf5.rackcdn.com/10129/ABD-Feb_600x300_2025-02-17-CLEAN.png"
@@ -445,15 +448,15 @@
                 <mj-column width="25px">&nbsp;</mj-column>
 
                 <mj-column width="550px">
-                    <mj-text css-class="wysiwyg overlay" color="#ffffff" padding-left="0" padding-right="0">
+                    <mj-text css-class="wysiwyg overlay" color="#ffffff" padding="0 0 10px">
                         <h3>Lorem ipsum dolor sit amet consectetur</h3>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
                         </p>
                     </mj-text>
                     <mj-button
-                            padding-left="0" padding-right="0"
-                            css-class="button"
+                            padding="10px 0 0"
+                            css-class="button "
                             color="#ffffff"
                             background-color="#094d9a"
                             href="https://ats.org/"
